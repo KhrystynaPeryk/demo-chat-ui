@@ -32,7 +32,6 @@ export default function Home() {
         <ChatSidebar 
           selectedChatId={selectedChatId}
           onChatSelect={handleChatSelect}
-          onClose={() => setIsSidebarOpen(false)}
         />
       </div>
 

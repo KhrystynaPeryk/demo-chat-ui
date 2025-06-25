@@ -15,7 +15,6 @@ interface Chat {
     interface ChatSidebarProps {
     selectedChatId: string | null;
     onChatSelect: (chatId: string) => void;
-    onClose: () => void;
     }
 
     const chats: Chat[] = [
@@ -77,7 +76,7 @@ interface Chat {
     }
     ];
 
-    export default function ChatSidebar({ selectedChatId, onChatSelect, onClose }: ChatSidebarProps) {
+    export default function ChatSidebar({ selectedChatId, onChatSelect }: ChatSidebarProps) {
     const [searchQuery, setSearchQuery] = useState('');
 
     const filteredChats = chats.filter(chat =>
